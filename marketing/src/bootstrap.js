@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App';
 
 const mount = (htmlElement) => {
-  ReactDOM.render(<h1>Marketing</h1>, htmlElement);
+  ReactDOM.render(<App />, htmlElement);
 };
 
 
