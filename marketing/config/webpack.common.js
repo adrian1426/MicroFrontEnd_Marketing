@@ -7,7 +7,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/presets-react', '@babel/presets-env'],
+            presets: ['@babel/preset-react', '@babel/preset-env'],
             plugins: ['@babel/plugin-transform-runtime']
           }
         }
