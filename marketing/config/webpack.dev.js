@@ -18,7 +18,8 @@ const devConfig = {
       filename: 'remoteEntry.js',
       exposes: {
         './MarketingApp': './src/bootstrap'
-      }
+      },
+      shared: ['react', 'react-dom']
     }),
     new HhmlWebpackPlugin({
       template: './public/index.html'
