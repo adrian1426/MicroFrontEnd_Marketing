@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createMemoryHistory } from 'history';
 import App from './App';
 
 const mount = (htmlElement) => {
-  ReactDOM.render(<App />, htmlElement);
+  const history = createMemoryHistory();
+
+  ReactDOM.render(<App history={history} />, htmlElement);
 };
 
 
