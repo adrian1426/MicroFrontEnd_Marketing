@@ -14,7 +14,7 @@ const mount = (htmlElement, { onNavigate }) => {
 if (process.env.NODE_ENV === 'development') {
   const root = document.querySelector('#_marketing-dev-root');
 
-  root && mount(root, { onNavigate: null });
+  root && mount(root, {});
 }
 
 export { mount };
