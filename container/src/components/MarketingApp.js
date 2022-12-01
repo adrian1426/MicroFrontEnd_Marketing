@@ -5,7 +5,11 @@ const MarketingApp = () => {
   const refMarketing = useRef(null);
 
   useEffect(() => {
-    mount(refMarketing.current);
+    mount(refMarketing.current, {
+      onNavigate: () => {
+        console.log('Container navegará en marketing');
+      }
+    });
   }, []);
 
   return (
