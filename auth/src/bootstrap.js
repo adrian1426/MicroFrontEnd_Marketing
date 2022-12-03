@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom';
 import { createMemoryHistory, createBrowserHistory } from 'history';
 import App from './App';
 
-const mount = (htmlElement, { onNavigate, defaultHistory }) => {
-  const history = defaultHistory || createMemoryHistory();
+const mount = (htmlElement, { onNavigate, defaultHistory, initialPath }) => {
+  const history = defaultHistory || createMemoryHistory({
+    initialEntries: [initialPath]
+  });
   onNavigate && history.listen(onNavigate);
 
   ReactDOM.render(<App history={history} />, htmlElement);
