@@ -2,7 +2,8 @@ import React, { useRef, useEffect } from 'react';
 import { mount } from 'auth/AuthApp';
 import { useHistory } from 'react-router-dom';
 
-const AuthApp = () => {
+const AuthApp = (props) => {
+  const { onSignIn } = props;
   const refAuth = useRef(null);
   const history = useHistory();
 
@@ -17,9 +18,7 @@ const AuthApp = () => {
           history.push(nextPathName);
         }
       },
-      onSignIn: () => {
-        console.log('user signed in')
-      }
+      onSignIn
     });
 
     history.listen(onParentNavigate);
