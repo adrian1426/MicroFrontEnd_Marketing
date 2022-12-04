@@ -19,7 +19,7 @@ const App = () => {
       <StylesProvider generateClassName={generateClassName}>
         <div>
           <Header signedIn={isSignedIn} onSignOut={() => setIsSignedIn(false)} />
-          <Suspense fallback={<h1>Cargando...</h1>}>
+          <Suspense fallback={<h1>Loading...</h1>}>
             <Switch>
               <Route path="/auth">
                 <AuthApp onSignIn={() => setIsSignedIn(true)} />
