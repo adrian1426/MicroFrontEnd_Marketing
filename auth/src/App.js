@@ -9,7 +9,6 @@ const generateClassName = createGenerateClassName({
 });
 
 const App = (props) => {
-
   const { history, onSignIn } = props;
 
   return (
